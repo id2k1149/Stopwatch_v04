@@ -29,6 +29,8 @@ struct ContentView: View {
                 )
             }
             Spacer()
+            
+            StartButton()
         }
         .padding()
     }
@@ -100,6 +102,22 @@ struct OrangeHand: View {
                    alignment: .center)
     }
 }
+
+struct StartButton: View {
+    var body: some View {
+        Button(action: {
+            // Add code to handle button tap here
+        }) {
+            Text("Start")
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(10)
+        }
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
