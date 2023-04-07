@@ -30,7 +30,7 @@ struct ContentView: View {
             }
             Spacer()
             
-            StartButton()
+            StartButton(currentTime: $currentTime)
         }
         .padding()
     }
@@ -104,9 +104,12 @@ struct OrangeHand: View {
 }
 
 struct StartButton: View {
+    @Binding var currentTime: Double
+    
     var body: some View {
         Button(action: {
             // Add code to handle button tap here
+            currentTime += 30.0
         }) {
             Text("Start")
                 .fontWeight(.bold)
